@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>봄봄축제 초대장</title>
+  <meta name="theme-color" content="#c97b8a" />
+  <meta name="description" content="따뜻한 봄날, 기쁨과 나눔이 가득한 특별한 주말을 준비했습니다. 2026.05.31 (주일) | 선교제일교회" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="봄봄축제 초대장" />
+  <meta property="og:description" content="따뜻한 봄날, 기쁨과 나눔이 가득한 특별한 주말을 준비했습니다." />
+  <meta property="og:image" content="https://1q2w3e4r-kor.github.io/BOMBOM2/thumb.png" />
+  <meta property="og:url" content="https://1q2w3e4r-kor.github.io/BOMBOM2" />
+
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
+
+  <style>
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #f9f3ee;
+      font-family: 'Pretendard', sans-serif;
+      color: #2b2b2b;
+      overflow-x: hidden;
+    }
+
+    .wrap {
+      max-width: 420px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 0 0 1px rgba(0,0,0,.05);
+      position: relative;
+    }
+
+    /* ── 헤더 섹션 ── */
+    .section-hero {
+      padding: 40px 20px 32px;
+      text-align: center;
+      background: linear-gradient(160deg, #fdf6ee 0%, #fce8e0 60%, #f9ddd6 100%);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 7px 22px;
+      border: 2px solid #c97b8a;
+      color: #c97b8a;
+      border-radius: 30px;
+      font-size: 15px;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+      font-weight: 500;
+    }
+
+    .hero-subtitle {
+      font-size: 13px;
+      color: #9b6b5a;
+      letter-spacing: 0.5px;
+      margin: 0 0 6px;
+      font-weight: 400;
+    }
+
+    .hero-title {
+      font-size: 42px;
+      font-weight: 900;
+      color: #c0395a;
+      margin: 0 0 4px;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .hero-title-leaf {
+      font-size: 28px;
+      color: #c0395a;
+      margin-right: 4px;
+    }
+
+    .lead {
+      font-size: 14px;
+      color: #7a5a52;
+      margin: 14px 0 0;
+      line-height: 1.9;
+      text-align: center;
+    }
+
+    /* ── 이미지/비디오 공통 ── */
+    .poster-img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* ── 플리마켓 상세 섹션 ── */
+    .section-flea-detail {
+      padding: 44px 20px;
+      background: #fffaf7;
+      text-align: center;
+    }
+
+    .section-flea-detail h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #8b3a4a;
+      margin-bottom: 8px;
+    }
+
+    .section-flea-detail .subtitle {
+      font-size: 13px;
+      color: #9b6b5a;
+      margin-bottom: 32px;
+    }
+
+    .flea-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .flea-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .flea-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #fdf0e8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 8px;
+      border: 2px solid #f9d8cc;
+      box-shadow: 0 4px 10px rgba(139,58,74,0.05);
+    }
+
+    .flea-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #5a3a3a;
+      word-break: keep-all;
+    }
+
+    .flea-footer {
+      font-size: 13px;
+      color: #8b3a4a;
+      font-weight: 600;
+      background: #fdf0e8;
+      padding: 10px 20px;
+      border-radius: 20px;
+      display: inline-block;
+    }
+
+    /* ── 강사 소개 섹션 (요청하신 이전 소스 스타일) ── */
+    .section2 {
+      background-color: #e9e9e9;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .section2 h2 {
+      font-size: 28px;
+      margin-bottom: 25px;
+      font-weight: 700;
+      color: #153240;
+    }
+
+    .profile-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .profile-image img { width: 170px; height: auto; }
+    .profile-text { flex: 1; max-width: 400px; }
+    .profile-text h3 { font-size: 22px; font-weight:700; margin: 0 0 5px; }
+    .profile-text h4 { font-size: 14px; font-weight: 300; color: #333; margin: 0 0 15px; }
+    .profile-text p { font-size: 12.5px; line-height:1.6; color:#333; }
+    
+    .profile-bottom-img { margin-top: 20px; }
+    .profile-bottom-img img { width: 100%; height: auto; border-radius: 8px; }
+
+    /* ── 오시는 길 섹션 ── */
+    .section-map {
+      padding: 44px 20px 36px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .section-map h2 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #8b3a4a;
+      margin: 0 0 20px;
+    }
+
+    .map-frame {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      margin-bottom: 22px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background-color: #8b3a4a;
+      color: #fce8d8;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      border-radius: 999px;
+      min-width: 240px;
+      text-align: center;
+    }
+
+    .btn-outline {
+      background: #fff;
+      border: 2px solid #8b3a4a;
+      color: #8b3a4a;
+    }
+
+    /* ── 푸터 ── */
+    .footer {
+      text-align: center;
+      padding: 32px 20px 40px;
+      background: linear-gradient(160deg, #fdf6ee 0%, #fce8e0 100%);
+    }
+
+    .footer img {
+      width: 160px;
+      margin: 0 auto 10px;
+      display: block;
+    }
+
+    .footer-address {
+      font-size: 11px;
+      color: #999;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* ── BGM 버튼 ── */
+    #bgm-toggle {
+      position: fixed;
+      right: 16px;
+      bottom: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      background: #8b3a4a;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(139,58,74,0.35);
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    /* ── 음악 시작 오버레이 ── */
+    #play-prompt {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    #play-prompt.hidden { display: none; }
+    #play-prompt button {
+      padding: 16px 36px;
+      font-size: 17px;
+      background: #c97b8a;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    @media (max-width: 420px) {
+      .hero-title { font-size: 36px; }
+      .flea-circle { width: 70px; height: 70px; font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="play-prompt">
+  <button id="start-music">🌸 봄봄축제와 함께 시작하기</button>
+</div>
+
+<div class="wrap">
+
+  <section class="section-hero">
+    <div class="badge">INVITATION</div>
+    <p class="hero-subtitle">하나님을 바라 봄, 내 삶의 봄</p>
+    <h1 class="hero-title"><span class="hero-title-leaf">🌷</span>봄봄축제</h1>
+    <p class="lead">
+      따뜻한 봄날,<br />
+      기쁨과 나눔이 가득한<br />
+      특별한 주말을 준비했습니다.
+    </p>
+  </section>
+
+  <audio id="bgm" loop playsinline preload="auto">
+    <source src="https://1q2w3e4r-kor.github.io/BOMBOM/BGM.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="bgm-toggle">🔇</button>
+
+  <img class="poster-img" src="1.png" alt="메인 포스터" />
+  <img class="poster-img" src="2.png" alt="플리마켓 안내" />
+
+  <section class="section-flea-detail">
+    <h2>우리 동네 인기 업체 총출동!</h2>
+    <p class="subtitle">정성을 가득 담은 다양한 업체들이 함께합니다.</p>
+    <div class="flea-grid">
+      <div class="flea-item"><div class="flea-circle">👕</div><div class="flea-label">의류</div></div>
+      <div class="flea-item"><div class="flea-circle">🥐</div><div class="flea-label">베이커리</div></div>
+      <div class="flea-item"><div class="flea-circle">💐</div><div class="flea-label">꽃다발</div></div>
+      <div class="flea-item"><div class="flea-circle">🏺</div><div class="flea-label">도자기</div></div>
+      <div class="flea-item"><div class="flea-circle">👜</div><div class="flea-label">패션잡화</div></div>
+      <div class="flea-item"><div class="flea-circle">💍</div><div class="flea-label">악세서리</div></div>
+      <div class="flea-item"><div class="flea-circle">🎨</div><div class="flea-label">공예품</div></div>
+      <div class="flea-item"><div class="flea-circle">🐱</div><div class="flea-label">초상화</div></div>
+      <div class="flea-item"><div class="flea-circle">🧶</div><div class="flea-label">수세미</div></div>
+    </div>
+    <div class="flea-footer">외에도 다양한 먹거리와 볼거리가 가득해요!</div>
+  </section>
+
+  <img class="poster-img" src="3.png" alt="VIP 안내" />
+
+  <video id="main-video" width="100%" controls style="display: block; margin: 0;">
+    <source src="5.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <section class="section2">
+    <h2>강사 소개</h2>
+    <div class="profile-wrapper">
+      <div class="profile-image"><img src="nadeul_01.png" alt="나들 박영열 목사"></div>
+      <div class="profile-text">
+        <h3>나들 | 박영열 목사</h3>
+        <h4>(엔터교회 담임)</h4>
+        <p>
+          90년대 중반, 앨범 '좋아좋아'로 큰 사랑을 받았던 '일기예보'의 보컬 '나들'로 활동하셨습니다.<br><br>
+          '인형의 꿈', '그대만 있다면', '니가 좋아' 등 수많은 히트곡과 더불어
+          복음송 작곡, 찬양사역, 간증사역으로 많은 은혜를 끼치고 계십니다.
+        </p>
+      </div>
+    </div>
+    <div class="profile-bottom-img">
+      <img src="nadeul_02.png" alt="나들 목사와 찬양팀">
+    </div>
+  </section>
+
+  <section class="section-map">
+    <h2>오시는 길</h2>
+    <div class="map-frame">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3175.0505100000003!2d127.0182!3d37.2831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDE2JzU5LjEiTiAxMjfCsDAxJzA1LjUiRQ!5e0!3m2!1sko!2skr!4v1620000000000!5m2!1sko!2skr" width="100%" height="240" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="button-group">
+      <a class="btn" href="https://www.mf21.or.kr/" target="_blank">교회 홈페이지 바로가기</a>
+      <a class="btn btn-outline" href="tel:0312580660">문의 031 258 0660</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <img src="logo.png" alt="선교제일교회 로고" />
+    <div style="font-size: 13px; color: #8b3a4a; font-weight: 700;">선교제일교회</div>
+    <div class="footer-address">경기도 수원시 장안구 파장천로30번길 24</div>
+  </footer>
+
+</div>
+
+<script>
+  const audio = document.getElementById("bgm");
+  const btn = document.getElementById("bgm-toggle");
+  const playPrompt = document.getElementById("play-prompt");
+  const startBtn = document.getElementById("start-music");
+  const video = document.getElementById("main-video");
+  let isPlaying = false;
+
+  function playMusic() {
+    if (!audio) return;
+    
+    // 음악 재생 시 비디오 정지
+    if (!video.paused) video.pause();
+
+    audio.volume = 0.5;
+    audio.play().then(() => {
+      isPlaying = true;
+      btn.textContent = "🔊";
+    }).catch(() => {
+      isPlaying = false;
+      btn.textContent = "🔇";
+    });
+  }
+
+  // 비디오 재생 시 음악 정지
+  video.addEventListener("play", () => {
+    if (isPlaying) {
+      audio.pause();
+      isPlaying = false;
+      btn.textContent = "🔇";
+    }
+  });
+
+  if (startBtn) {
+    startBtn.addEventListener("click", () => {
+      playPrompt.classList.add("hidden");
+      playMusic();
+    });
+  }
+
+  if (btn) {
+    btn.addEventListener("click", () => {
+      if (isPlaying) {
+        audio.pause();
+        btn.textContent = "🔇";
+        isPlaying = false;
+      } else {
+        playMusic();
+      }
+    });
+  }
+
+  window.addEventListener("load", () => {
+    audio.play().then(() => {
+      playPrompt.classList.add("hidden");
+      isPlaying = true;
+      btn.textContent = "🔊";
+    }).catch(() => {
+      playPrompt.classList.remove("hidden");
+    });
+  });
+</script>
+
+</body>
+</html>
